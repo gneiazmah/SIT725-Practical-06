@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gneiazmah/SIT725-Practical-02.git"
+    "url": "git+https://github.com/gneiazmah/SIT725-Practical-03.git"
   },
   "keywords": [
     "Express",
@@ -17,9 +17,9 @@
   "author": "Azmah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gneiazmah/SIT725-Practical-02/issues"
+    "url": "https://github.com/gneiazmah/SIT725-Practical-03/issues"
   },
-  "homepage": "https://github.com/gneiazmah/SIT725-Practical-02#readme",
+  "homepage": "https://github.com/gneiazmah/SIT725-Practical-03#readme",
   "dependencies": {
     "express": "^4.18.2"
   },
