@@ -17,9 +17,9 @@
   "author": "Azmah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gneiazmah/SIT725-Practical-03/issues"
+    "url": "https://github.com/gneiazmah/SIT725-Practical-04/issues"
   },
-  "homepage": "https://github.com/gneiazmah/SIT725-Practical-03#readme",
+  "homepage": "https://github.com/gneiazmah/SIT725-Practical-04#readme",
   "dependencies": {
     "express": "^4.18.2"
   },

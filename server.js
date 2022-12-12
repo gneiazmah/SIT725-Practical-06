@@ -1,25 +1,51 @@
-var express = require("express");
-const req = require("express/lib/request");
-const res = require("express/lib/response");
+var express = require("express")
+
 var app = express()
 
+
+
 app.use(express.static(__dirname+'/public'))
+
 app.use(express.json());
-app.use(express.urlencoded({extends: false}))
 
-// const addNumbers = (number1,number2) => {
-//     var num1 = parseInt(number1)
-//     var num2 = parseInt(number2)
-//     var result = num1+num2;
-//     return result;
-// }
+app.use(express.urlencoded({ extended: false }));
 
-// app.get("/addTwoNumbers",(req,res) =>{
-//     var number1 = req.query.number1;
-//     var number2 = req.query.number2;
-//     var result = addNumbers(number1,number2)
-//     res.json({statusCode: 200, data: result, message:'success'})
-// })
+
+const cardList = [
+
+    {
+
+        title: "Kitten 2",
+
+        image: "images/img-01.jpg",
+
+        link: "About Kitten 2",
+
+        desciption: "Demo desciption about kitten 2"
+
+    },
+
+    {
+
+        title: "Kitten 3",
+
+        image: "images/img-01.jpg",
+
+        link: "About Kitten 3",
+
+        desciption: "Demo desciption about kitten 3"
+
+    }
+
+]
+
+
+
+app.get('/api/projects',(req,res) => {
+
+    res.json({statusCode: 200, data: cardList, message:"Success"})
+
+})
 
 var port = process.env.port || 3000;
 
