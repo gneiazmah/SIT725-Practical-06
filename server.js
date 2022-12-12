@@ -1,7 +1,7 @@
 var express = require("express")
-
 var app = express()
-
+var cors = require("cors")
+let projectCollection;
 
 
 app.use(express.static(__dirname+'/public'))
@@ -10,6 +10,31 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
+app.use(cors())
+
+//mongoDB action
+
+const MongoClient = require('mongodb').MongoClient;
+
+//add database connection
+
+const uri = 'mongodb+srv://96azma:Azmah1996@cluster0.hk8jelx.mongodb.net/?retryWrites=true&w=majority'
+const Client = new MongoClient(uri, {useNewUrlPaser: true})
+
+const createColllection = (collectionName) => {
+    client.connect((err,db) => {
+        projectCollection = client.db().collection(collectionName);
+
+        if(!err) {
+            console.log('MongoDB Connected')
+        }
+        else {
+
+            console.log("DB Error: ", err);
+            process.exit(1);
+        }
+    })
+}
 
 const cardList = [
 
@@ -51,4 +76,5 @@ var port = process.env.port || 3000;
 
 app.listen(port,()=>{
     console.log("App listening to: http://localhost:"+port)
+    createColllection("pets")
 })
